@@ -1,0 +1,100 @@
+# Task Management System – Backend & Frontend
+
+A scalable REST API with authentication, role-based access control, and a basic React frontend to demonstrate API integration.
+
+## 🚀 Tech Stack
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- bcrypt (Password Hashing)
+- Swagger (API Documentation)
+
+### Frontend
+- React.js
+- Axios
+- React Router DOM
+
+---
+
+## 🔐 Features
+- User registration & login with JWT authentication
+- Role-based access control (USER / ADMIN)
+- Task CRUD operations
+- Admin dashboard to manage all tasks
+- Protected routes
+- API versioning (`/api/v1`)
+- Swagger API documentation
+
+---
+
+## 🗂️ Project Structure
+root/
+│── backend/
+│── frontend/
+│── README.md
+
+---
+
+## ⚙️ Backend Setup
+```bash
+cd backend
+npm install
+Create .env file:
+
+PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/task_manager
+JWT_SECRET=your_jwt_secret
+Run backend:
+
+npm run dev
+🖥️ Frontend Setup
+cd frontend
+npm install
+npm start
+Frontend runs on:
+
+http://localhost:3000
+📘 API Documentation (Swagger)
+http://localhost:5000/api-docs
+🧪 Sample Credentials
+Admin:
+
+email: admin@test.com
+password: admin123
+User:
+
+email: user@test.com
+password: user123
+📈 Scalability & Security Notes
+See section below 👇
+
+
+---
+
+# 📈 Scalability & Security Notes (Very Important)
+
+Add **this section below README or in a separate file** (both are acceptable).
+
+```md
+## 📈 Scalability & Security Design
+
+### Authentication & Security
+- Passwords are securely hashed using bcrypt with salt
+- Stateless JWT authentication enables horizontal scaling
+- Role-based access control enforced via middleware
+- Input validation and error handling implemented across APIs
+- Environment variables used for sensitive configurations
+
+### Scalability Considerations
+- Modular project structure allows easy addition of new modules
+- Stateless APIs allow deployment behind load balancers
+- MongoDB supports horizontal scaling via sharding
+- Redis can be integrated for caching frequently accessed data
+- Microservices-ready architecture with API versioning
+
+### Deployment Readiness
+- Backend can be containerized using Docker
+- Frontend can be served via Nginx or CDN
+- CI/CD pipelines can be integrated for automated deployments
